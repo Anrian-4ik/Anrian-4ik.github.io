@@ -1,21 +1,13 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anrian-4ik GitHub Pages</title>
-  <style>
-    body {
-      font-family: system-ui, sans-serif;
-      max-width: 720px;
-      margin: 4rem auto;
-      padding: 0 1rem;
-      line-height: 1.6;
-    }
-  </style>
-</head>
-<body>
-  <h1>Привет, мир!Anrian-4ik </h1>
-  <p>Этот сайт работает на GitHub Pages.</p>
-</body>
+<html>
+  <head><meta charset="utf-8"><title>OAuth redirect</title></head>
+  <body>
+    <h1>OAuth redirect page</h1>
+    <p>Code will appear here: <span id="code"></span></p>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const code = params.get('code');
+      if (code) document.getElementById('code').textContent = code;
+    </script>
+  </body>
 </html>
